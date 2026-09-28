@@ -44,6 +44,15 @@ const WIAPY_STEPS = [
   "Salve o webhook",
 ];
 
+const CAKTO_STEPS = [
+  'Acesse o painel da Cakto e entre no produto desejado',
+  'Vá em "Integrações" e clique em "Webhook"',
+  "Cole a URL criada aqui no campo de URL do webhook",
+  'Marque todos os eventos: Compra aprovada, Compra recusada, Pix/Boleto/PicPay gerado, Chargeback, Reembolso e Abandono de checkout',
+  "Salve o webhook",
+  "Repita para cada produto que quiser rastrear (o webhook é configurado por produto na Cakto)",
+];
+
 const API_FIELDS = [
   { field: "external_id", type: "string", required: true,  desc: "ID único da transação no seu sistema" },
   { field: "status",      type: "string", required: true,  desc: '"approved" | "pending" | "refunded" | "chargeback" | "trial"' },
@@ -218,6 +227,15 @@ export function IntegrationGuide() {
               </AccordionTrigger>
               <AccordionContent className="pb-3 pt-1">
                 <StepsList steps={WIAPY_STEPS} />
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="cakto" className="border-border/50">
+              <AccordionTrigger className="text-xs font-semibold py-2.5 hover:no-underline">
+                <PlatformLogo platform="cakto" size="md" />
+              </AccordionTrigger>
+              <AccordionContent className="pb-3 pt-1">
+                <StepsList steps={CAKTO_STEPS} />
               </AccordionContent>
             </AccordionItem>
 

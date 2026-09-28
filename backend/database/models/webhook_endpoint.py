@@ -12,6 +12,7 @@ class WebhookPlatform(str, enum.Enum):
     PAYT = "payt"
     API = "api"
     WIAPY = "wiapy"
+    CAKTO = "cakto"
 
 
 class WebhookEndpoint(Base):

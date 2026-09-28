@@ -18,6 +18,8 @@ _NEW_ENUM_VALUES = [
     ("recoverytype", "TRIAL"),
     ("webhookplatform", "WIAPY"),
     ("paymentplatform", "WIAPY"),
+    ("webhookplatform", "CAKTO"),
+    ("paymentplatform", "CAKTO"),
 ]
 
 # Mapeamento value→name para normalizar dados da era VARCHAR
@@ -28,10 +30,10 @@ _DATA_FIXES: dict[tuple[str, str], dict[str, str]] = {
         "trial": "TRIAL",
     },
     ("transactions", "platform"): {
-        "kiwify": "KIWIFY", "payt": "PAYT", "api": "API", "wiapy": "WIAPY",
+        "kiwify": "KIWIFY", "payt": "PAYT", "api": "API", "wiapy": "WIAPY", "cakto": "CAKTO",
     },
     ("webhook_endpoints", "platform"): {
-        "kiwify": "KIWIFY", "payt": "PAYT", "api": "API", "wiapy": "WIAPY",
+        "kiwify": "KIWIFY", "payt": "PAYT", "api": "API", "wiapy": "WIAPY", "cakto": "CAKTO",
     },
     ("recoveries", "type"): {
         "abandoned_cart": "ABANDONED_CART",

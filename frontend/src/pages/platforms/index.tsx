@@ -15,7 +15,7 @@ export default function PlatformsPage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isCreating, setIsCreating] = useState(false);
 
-  const handleCreate = async (platform: "kiwify" | "payt" | "api" | "wiapy", name: string) => {
+  const handleCreate = async (platform: "kiwify" | "payt" | "api" | "wiapy" | "cakto", name: string) => {
     try {
       setIsCreating(true);
       await addWebhook(platform, name);

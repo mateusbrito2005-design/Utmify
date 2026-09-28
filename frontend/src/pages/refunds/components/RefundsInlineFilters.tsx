@@ -17,7 +17,7 @@ interface RefundsInlineFiltersProps {
   filterOptions: SalesFilterOptions;
 }
 
-const platformLabels: Record<string, string> = { kiwify: "Kiwify", payt: "PayT", api: "API", wiapy: "Wiapy" };
+const platformLabels: Record<string, string> = { kiwify: "Kiwify", payt: "PayT", api: "API", wiapy: "Wiapy", cakto: "Cakto" };
 
 export function RefundsInlineFilters({
   filters, onFiltersChange, onClose, filterOptions,

@@ -3,7 +3,7 @@
 export interface SaleAPI {
   id: number;
   external_id: string;
-  platform: "kiwify" | "payt" | "wiapy";
+  platform: "kiwify" | "payt" | "wiapy" | "cakto";
   status: "approved" | "refunded" | "chargeback" | "pending" | "trial";
   amount: number;
   customer_email: string | null;

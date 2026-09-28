@@ -3,7 +3,7 @@
 export interface CustomerAPI {
   id: number;
   external_id: string | null;
-  platform: "kiwify" | "payt" | "api" | "wiapy" | null;
+  platform: "kiwify" | "payt" | "api" | "wiapy" | "cakto" | null;
   name: string | null;
   email: string;
   phone: string | null;

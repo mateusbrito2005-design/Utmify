@@ -11,19 +11,20 @@ import { PlatformLogo } from "@/components/PlatformLogo";
 interface CreateWebhookModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  onCreate: (platform: "kiwify" | "payt" | "api" | "wiapy", name: string) => void;
+  onCreate: (platform: "kiwify" | "payt" | "api" | "wiapy" | "cakto", name: string) => void;
   isLoading?: boolean;
 }
 
-const PLATFORM_META: Record<"kiwify" | "payt" | "api" | "wiapy", { label: string; desc: string }> = {
+const PLATFORM_META: Record<"kiwify" | "payt" | "api" | "wiapy" | "cakto", { label: string; desc: string }> = {
   kiwify: { label: "Kiwify", desc: "Produtos digitais" },
   payt: { label: "PayT", desc: "Gateway pagamento" },
   api: { label: "API", desc: "Integração direta" },
   wiapy: { label: "Wiapy", desc: "Gateway de checkout" },
+  cakto: { label: "Cakto", desc: "Gateway de checkout" },
 };
 
 export function CreateWebhookModal({ open, onOpenChange, onCreate, isLoading }: CreateWebhookModalProps) {
-  const [platform, setPlatform] = useState<"kiwify" | "payt" | "api" | "wiapy" | null>(null);
+  const [platform, setPlatform] = useState<"kiwify" | "payt" | "api" | "wiapy" | "cakto" | null>(null);
   const [name, setName] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -52,7 +53,7 @@ export function CreateWebhookModal({ open, onOpenChange, onCreate, isLoading }: 
           <div className="space-y-2">
             <Label>Plataforma</Label>
           <div className="grid grid-cols-2 gap-3">
-              {(["kiwify", "payt", "wiapy", "api"] as const).map((p) => (
+              {(["kiwify", "payt", "wiapy", "cakto", "api"] as const).map((p) => (
                 <button
                   key={p}
                   type="button"

@@ -1,10 +1,11 @@
-import { RiCodeSSlashLine, RiFlashlightLine } from "@remixicon/react";
+import { RiCodeSSlashLine, RiFlashlightLine, RiCake2Line } from "@remixicon/react";
 
 const PLATFORM_CONFIG = {
   kiwify: { label: "Kiwify", logo: "/platforms/kiwify.webp", type: "image" as const },
   payt: { label: "PayT", logo: "/platforms/payt.webp", type: "image" as const },
   api: { label: "API", logo: null, type: "badge" as const, icon: RiCodeSSlashLine },
   wiapy: { label: "Wiapy", logo: null, type: "badge" as const, icon: RiFlashlightLine },
+  cakto: { label: "Cakto", logo: null, type: "badge" as const, icon: RiCake2Line },
 } as const;
 
 type Platform = keyof typeof PLATFORM_CONFIG;

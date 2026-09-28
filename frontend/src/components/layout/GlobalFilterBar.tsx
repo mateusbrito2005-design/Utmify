@@ -57,7 +57,7 @@ export function GlobalFilterBar({
     filters.taxEnabled ? "1" : "",
     filters.opCostsEnabled ? "1" : "",
   ].filter(Boolean).length;
-  const platformLabels: Record<string, string> = { kiwify: "Kiwify", payt: "PayT", api: "API", wiapy: "Wiapy" };
+  const platformLabels: Record<string, string> = { kiwify: "Kiwify", payt: "PayT", api: "API", wiapy: "Wiapy", cakto: "Cakto" };
   const handleClear = () => onFiltersChange({
     datePreset: "today", dateStart: "", dateEnd: "",
     product: "all", platform: "all", accountSlug: "all",

@@ -19,7 +19,7 @@ const DEFAULT_CHANNEL_OPTIONS = [
   { value: "other", label: "Outras" },
 ];
 
-const platformLabels: Record<string, string> = { kiwify: "Kiwify", payt: "PayT", api: "API", wiapy: "Wiapy" };
+const platformLabels: Record<string, string> = { kiwify: "Kiwify", payt: "PayT", api: "API", wiapy: "Wiapy", cakto: "Cakto" };
 
 interface Product {
   id: number;

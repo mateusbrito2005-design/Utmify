@@ -25,12 +25,14 @@ const platformColors: Record<string, string> = {
   kiwify: "bg-chart-1/15 text-chart-1 border-chart-1/20",
   payt: "bg-chart-2/15 text-chart-2 border-chart-2/20",
   wiapy: "bg-chart-3/15 text-chart-3 border-chart-3/20",
+  cakto: "bg-chart-4/15 text-chart-4 border-chart-4/20",
 };
 
 const platformLabels: Record<string, string> = {
   kiwify: "Kiwify",
   payt: "PayT",
   wiapy: "Wiapy",
+  cakto: "Cakto",
 };
 
 interface SalesTableProps {

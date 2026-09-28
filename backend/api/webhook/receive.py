@@ -8,6 +8,7 @@ from integrations.webhook.kiwify import parse_kiwify_webhook
 from integrations.webhook.payt import parse_payt_webhook
 from integrations.webhook.api_direct import parse_api_webhook
 from integrations.webhook.wiapy import parse_wiapy_webhook
+from integrations.webhook.cakto import parse_cakto_webhook
 from integrations.webhook.processor import process_webhook_event
 from integrations.webhook.test_emails import is_test_email
 
@@ -20,6 +21,7 @@ PARSERS = {
     WebhookPlatform.PAYT: parse_payt_webhook,
     WebhookPlatform.API: parse_api_webhook,
     WebhookPlatform.WIAPY: parse_wiapy_webhook,
+    WebhookPlatform.CAKTO: parse_cakto_webhook,
 }
 
 
